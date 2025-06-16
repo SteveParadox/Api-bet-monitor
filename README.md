@@ -1,7 +1,7 @@
 
 # ⚽ Automated Odds Monitoring System
 
-A real-time suspicious betting pattern detector built with **FastAPI**, **SQLAlchemy**, and **odds APIs** (OddsAPI, Betfair, Pinnacle). It monitors targeted football leagues for odds anomalies and sends automated alerts via Telegram or other channels.
+A real-time suspicious betting pattern detector built with **Flask**, **SQLAlchemy**, and **odds APIs** (OddsAPI, Betfair, Pinnacle). It monitors targeted football leagues for odds anomalies and sends automated alerts via Telegram or other channels.
 
 ---
 
@@ -129,7 +129,7 @@ python -m app.tasks.monitor
 ## 🚀 Roadmap
 
 - [x] Add Betfair volume anomaly detection
-- [ ] Integrate Pinnacle sharp money indicators
+- [x] Integrate Pinnacle sharp money indicators
 - [ ] Build frontend dashboard (React/Next.js)
 - [ ] Dockerize project
 - [ ] Add ML-based confidence scoring
