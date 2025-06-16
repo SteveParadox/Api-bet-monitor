@@ -1,6 +1,7 @@
+
 # ⚽ Automated Odds Monitoring System
 
-A real-time suspicious betting pattern detector built with **Flask**, **SQLAlchemy**, and **odds APIs** (OddsAPI, Betfair, Pinnacle). It monitors targeted football leagues for odds anomalies and sends automated alerts via Telegram or other channels.
+A real-time suspicious betting pattern detector built with **FastAPI**, **SQLAlchemy**, and **odds APIs** (OddsAPI, Betfair, Pinnacle). It monitors targeted football leagues for odds anomalies and sends automated alerts via Telegram or other channels.
 
 ---
 
@@ -53,7 +54,7 @@ app/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/SteveParadox/Api-bet-monitor.git
+git clone https://github.com/yourname/odds-monitor.git
 cd odds-monitor
 ```
 
@@ -83,12 +84,16 @@ TELEGRAM_CHAT_ID=your_chat_id
 
 ## 🧪 Run Locally
 
-### Start Flask server
-
+### Start FastAPI server
 ```bash
-export FLASK_APP=app
-export FLASK_ENV=development
-flask run
+uvicorn app.main:app --reload
+```
+
+### Run monitoring script (one-off)
+```bash
+python -m app.tasks.monitor
+```
+
 ---
 
 ## 🔌 API Endpoints
@@ -112,7 +117,7 @@ flask run
 
 ## 📦 Technologies Used
 
-- **Flask** for backend API
+- **FastAPI** for backend API
 - **SQLAlchemy** ORM
 - **APScheduler / cron** for scheduled tasks
 - **Requests** to fetch bookmaker APIs
@@ -124,7 +129,7 @@ flask run
 ## 🚀 Roadmap
 
 - [x] Add Betfair volume anomaly detection
-- [x] Integrate Pinnacle sharp money indicators
+- [ ] Integrate Pinnacle sharp money indicators
 - [ ] Build frontend dashboard (React/Next.js)
 - [ ] Dockerize project
 - [ ] Add ML-based confidence scoring
