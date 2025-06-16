@@ -1,4 +1,3 @@
-
 # ⚽ Automated Odds Monitoring System
 
 A real-time suspicious betting pattern detector built with **Flask**, **SQLAlchemy**, and **odds APIs** (OddsAPI, Betfair, Pinnacle). It monitors targeted football leagues for odds anomalies and sends automated alerts via Telegram or other channels.
@@ -85,12 +84,11 @@ TELEGRAM_CHAT_ID=your_chat_id
 ## 🧪 Run Locally
 
 ### Start Flask server
+
 ```bash
 export FLASK_APP=app
 export FLASK_ENV=development
 flask run
-
-
 ---
 
 ## 🔌 API Endpoints
