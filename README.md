@@ -54,7 +54,7 @@ app/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourname/odds-monitor.git
+git clone https://github.com/SteveParadox/Api-bet-monitor.git
 cd odds-monitor
 ```
 
@@ -84,15 +84,12 @@ TELEGRAM_CHAT_ID=your_chat_id
 
 ## 🧪 Run Locally
 
-### Start FastAPI server
+### Start Flask server
 ```bash
-uvicorn app.main:app --reload
-```
+export FLASK_APP=app
+export FLASK_ENV=development
+flask run
 
-### Run monitoring script (one-off)
-```bash
-python -m app.tasks.monitor
-```
 
 ---
 
@@ -117,7 +114,7 @@ python -m app.tasks.monitor
 
 ## 📦 Technologies Used
 
-- **FastAPI** for backend API
+- **Flask** for backend API
 - **SQLAlchemy** ORM
 - **APScheduler / cron** for scheduled tasks
 - **Requests** to fetch bookmaker APIs
